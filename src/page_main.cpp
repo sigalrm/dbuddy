@@ -10,6 +10,7 @@
 #include "page_scrolls.h"
 #include "page_spellbooks.h"
 #include "page_wands.h"
+#include <string.h>
 
 MainPage::MainPage(): BasePage(NULL)
 {
@@ -43,6 +44,7 @@ MainPage::enter()
 	   "\tt - Spellbooks\n"
 	   "\tw - Wands\n"
 	   "\n"
+	   "\t@ - Reset Database\n"
 	   "\tq - Quit\n");
 }
 
@@ -54,10 +56,40 @@ MainPage::process(char c)
     case 27:
 	alive = false;
 	break;
+    case '@':
+	reset();
+	break;
     default:
 	BasePage::process(c);
 	break;
     }
+}
+
+void
+MainPage::reset()
+{
+    int x, y;
+    char buf[16] = {0};
+
+    getmaxyx(stdscr, y, x);
+    move(y - 1, 0);
+    addstr("Enter 'yes' to confirm database reset: ");
+
+    echo();
+    wgetnstr(stdscr, buf, sizeof(buf) - 1);
+    noecho();
+
+    if (strcmp(buf, "yes") == 0)
+    {
+	s->reset();
+
+	for (ChildMap::iterator i = m_children.begin(); i != m_children.end(); ++i)
+	{
+	    i->second->reset();
+	}
+    }
+
+    redraw();
 }
 
 void

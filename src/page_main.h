@@ -7,6 +7,8 @@ public:
     void enter();
     void process(char);
 
+    void reset();
+
     bool alive;
     static void loop(MainPage&);
 };

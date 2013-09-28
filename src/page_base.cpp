@@ -31,6 +31,11 @@ BasePage::enter()
 }
 
 void
+BasePage::reset()
+{
+}
+
+void
 BasePage::change_page(BasePage *page)
 {
     s_cur = page;

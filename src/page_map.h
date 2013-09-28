@@ -21,4 +21,6 @@ public:
 
     void enter();
     void process(char);
+
+    void reset();
 };

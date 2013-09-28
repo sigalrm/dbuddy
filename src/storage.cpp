@@ -1,5 +1,6 @@
 #include "main.h"
 #include "storage.h"
+#include <unistd.h>
 #include <string.h>
 #include <fstream>
 
@@ -69,6 +70,14 @@ Storage::save()
     }
 
     rc = fclose(output);
+    if (rc != 0) {
+    }
+}
+
+void
+Storage::reset()
+{
+    int rc = unlink(SAVE_FILE);
     if (rc != 0) {
     }
 }

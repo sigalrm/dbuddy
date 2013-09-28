@@ -59,6 +59,7 @@ MapPage::process(char c)
 	addstr("Describe ");
 	addstr(m_menu[c].c_str());
 	addstr(": ");
+
 	echo();
 	wgetnstr(stdscr, buf, sizeof(buf) - 1);
 	noecho();
@@ -70,5 +71,14 @@ MapPage::process(char c)
     }
     else {
 	BasePage::process(c);
+    }
+}
+
+void
+MapPage::reset()
+{
+    for (StringMap::iterator i = m_map.begin(); i != m_map.end(); ++i)
+    {
+	i->second = "-";
     }
 }
