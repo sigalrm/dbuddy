@@ -8,6 +8,9 @@ main_SOURCES = main.h main.cpp \
 	page_map.h page_map.cpp \
 	storage.h storage.cpp \
 	\
+	page_level1.h \
+	page_level2.h \
+	\
 	page_amulets.h \
 	page_boots.h \
 	page_cloaks.h \
