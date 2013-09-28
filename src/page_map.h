@@ -6,7 +6,7 @@
 class MapPage: public BasePage
 {
 private:
-    typedef std::map<char,std::string> MenuMap;
+    typedef std::map<char,std::string,bool(*)(char,char)> MenuMap;
     MenuMap m_menu;
 
     unsigned int m_width;

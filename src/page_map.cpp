@@ -1,7 +1,16 @@
 #include "main.h"
 #include "page_map.h"
 
-MapPage::MapPage(BasePage *parent, StorageKey type): BasePage(parent), m_map(s->getMap(type))
+static bool
+MenuComp(char lhs, char rhs)
+{
+    int a = (lhs < 'a') ? (lhs - 'A' + 'z' + 1) : lhs;
+    int b = (rhs < 'a') ? (rhs - 'A' + 'z' + 1) : rhs;
+
+    return a < b;
+}
+
+MapPage::MapPage(BasePage *parent, StorageKey type): BasePage(parent), m_menu(&MenuComp), m_map(s->getMap(type))
 {
 }
 
@@ -13,8 +22,11 @@ MapPage::initMenu()
 
     for (StringMap::iterator i = m_map.begin(); i != m_map.end(); ++i)
     {
-	m_menu[c++] = i->first;
+	m_menu[c] = i->first;
 	m_width = std::max(m_width, (unsigned int)i->first.length());
+
+	if (++c > 'z')
+	    c = 'A';
     }
 }
 

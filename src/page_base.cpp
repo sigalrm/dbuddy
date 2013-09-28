@@ -53,5 +53,5 @@ BasePage::columnTab(const std::string &str, int maxwidth)
 	waddch(stdscr, ' ');
     }
 
-    waddch(stdscr, '\t');
+    addstr("    ");
 }

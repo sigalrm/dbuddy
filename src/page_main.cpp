@@ -8,6 +8,7 @@
 #include "page_potions.h"
 #include "page_rings.h"
 #include "page_scrolls.h"
+#include "page_spellbooks.h"
 #include "page_wands.h"
 
 MainPage::MainPage(): BasePage(NULL)
@@ -23,6 +24,7 @@ MainPage::MainPage(): BasePage(NULL)
     addChild('p', new PotionsPage(this));
     addChild('r', new RingsPage(this));
     addChild('s', new ScrollsPage(this));
+    addChild('t', new SpellbooksPage(this));
     addChild('w', new WandsPage(this));
 }
 
@@ -38,6 +40,7 @@ MainPage::enter()
 	   "\tp - Potions\n"
 	   "\tr - Rings\n"
 	   "\ts - Scrolls\n"
+	   "\tt - Spellbooks\n"
 	   "\tw - Wands\n"
 	   "\n"
 	   "\tq - Quit\n");

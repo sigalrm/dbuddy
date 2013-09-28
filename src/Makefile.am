@@ -16,4 +16,5 @@ main_SOURCES = main.h main.cpp \
 	page_potions.h \
 	page_rings.h \
 	page_scrolls.h \
+	page_spellbooks.h \
 	page_wands.h
