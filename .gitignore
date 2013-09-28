@@ -1,0 +1,29 @@
+# Ignored build products
+src/main
+
+# Ignored files
+.deps/
+aclocal.m4
+autom4te.cache/
+config.h
+config.h.in
+config.h.in~
+config.log
+config.status
+configure
+depcomp
+install-sh
+Makefile
+Makefile.in
+missing
+stamp-h1
+build.log
+
+# Ignored extensions
+*.o
+*.a
+*.lo
+*.la
+*.so
+.#*
+*~
