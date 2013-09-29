@@ -10,6 +10,7 @@ main_SOURCES = main.h main.cpp \
 	\
 	page_level1.h \
 	page_level2.h \
+	page_intrinsics.h \
 	\
 	page_amulets.h \
 	page_boots.h \

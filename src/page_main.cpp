@@ -2,6 +2,7 @@
 #include "page_main.h"
 #include "page_level1.h"
 #include "page_level2.h"
+#include "page_intrinsics.h"
 #include "page_amulets.h"
 #include "page_boots.h"
 #include "page_cloaks.h"
@@ -21,6 +22,7 @@ MainPage::MainPage(): BasePage(NULL)
     // add pages
     addChild('l', new Level1Page(this));
     addChild('n', new Level2Page(this));
+    addChild('i', new IntrinsicsPage(this));
 
     addChild('a', new AmuletsPage(this));
     addChild('b', new BootsPage(this));
@@ -40,6 +42,7 @@ MainPage::enter()
     addstr("\n"
 	   "\tl - Level Notes (01-26)\n"
 	   "\tn - Level Notes (27-52)\n"
+	   "\ti - Intrinsics\n"
 	   "\n"
 	   "\ta - Amulets\n"
 	   "\tb - Boots\n"
