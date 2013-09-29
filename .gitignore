@@ -1,5 +1,5 @@
 # Ignored build products
-src/main
+src/dbuddy
 
 # Ignored files
 .deps/
@@ -25,5 +25,6 @@ build.log
 *.lo
 *.la
 *.so
+*.tar.gz
 .#*
 *~

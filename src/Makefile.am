@@ -1,8 +1,8 @@
 AM_CXXFLAGS=$(NCURSES_CFLAGS)
 
-bin_PROGRAMS = main
-main_LDADD = $(NCURSES_LIBS)
-main_SOURCES = main.h main.cpp \
+bin_PROGRAMS = dbuddy
+dbuddy_LDADD = $(NCURSES_LIBS)
+dbuddy_SOURCES = main.h main.cpp \
 	page_base.h page_base.cpp \
 	page_main.h page_main.cpp \
 	page_map.h page_map.cpp \

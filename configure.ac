@@ -1,4 +1,4 @@
-AC_INIT([buddy], [0.99])
+AC_INIT([dbuddy], [0.99])
 AC_PREREQ([2.59])
 
 AC_CONFIG_SRCDIR([src/main.cpp])
