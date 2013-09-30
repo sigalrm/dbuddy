@@ -40,6 +40,8 @@ void
 MainPage::enter()
 {
     addstr("\n"
+	   "\t" PACKAGE_STRING "\n"
+	   "\n"
 	   "\tl - Level Notes (01-26)\n"
 	   "\tn - Level Notes (27-52)\n"
 	   "\ti - Intrinsics\n"

@@ -24,6 +24,7 @@ public:
 
     void redraw();
     void columnTab(const std::string&, int);
+    void columnCenter(const std::string&);
 
     static void change_page(BasePage*);
 };

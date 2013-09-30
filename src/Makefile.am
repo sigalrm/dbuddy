@@ -6,6 +6,7 @@ dbuddy_SOURCES = main.h main.cpp \
 	page_base.h page_base.cpp \
 	page_main.h page_main.cpp \
 	page_map.h page_map.cpp \
+	page_splash.h page_splash.cpp \
 	storage.h storage.cpp \
 	\
 	page_level1.h \

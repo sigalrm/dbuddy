@@ -1,4 +1,5 @@
 #include "main.h"
+#include "page_splash.h"
 #include "page_main.h"
 
 #include <stdlib.h>
@@ -55,10 +56,16 @@ main(int argc, char **argv)
 {
     setup();
 
-    s = new Storage();
-    MainPage m;
-    s->load();
-    MainPage::loop(m);
+    SplashPage p;
+    SplashPage::loop(p);
+
+    if (p.accepted)
+    {
+	s = new Storage();
+	MainPage m;
+	s->load();
+	MainPage::loop(m);
+    }
 
     finish(0);
     return 0;

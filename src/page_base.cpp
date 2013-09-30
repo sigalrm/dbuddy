@@ -60,3 +60,19 @@ BasePage::columnTab(const std::string &str, int maxwidth)
 
     addstr("    ");
 }
+
+void
+BasePage::columnCenter(const std::string &str)
+{
+    int x, y, n;
+
+    getmaxyx(stdscr, y, x);
+    n = (x - str.length()) / 2;
+
+    for (int i = 0; i < n; ++i) {
+	waddch(stdscr, ' ');
+    }
+
+    addstr(str.c_str());
+    waddch(stdscr, '\n');
+}
