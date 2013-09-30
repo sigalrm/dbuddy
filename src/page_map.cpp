@@ -70,6 +70,10 @@ MapPage::process(char c)
 	redraw();
     }
     else {
+	// go back on space or enter in addition to esc
+	if (c == ' ' || c == '\r')
+	    c = 27;
+
 	BasePage::process(c);
     }
 }
