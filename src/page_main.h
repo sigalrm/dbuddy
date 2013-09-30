@@ -2,6 +2,9 @@
 
 class MainPage: public BasePage
 {
+private:
+    void setPrayed();
+
 public:
     MainPage();
     void enter();

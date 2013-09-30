@@ -20,8 +20,6 @@ public:
     virtual void process(char);
     virtual void enter();
 
-    virtual void reset();
-
     void redraw();
     void columnTab(const std::string&, int);
     void columnCenter(const std::string&);

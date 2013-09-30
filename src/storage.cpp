@@ -77,7 +77,18 @@ Storage::save()
 void
 Storage::reset()
 {
+    StorageMap::iterator i, j;
+    StringMap::iterator k, l;
+
     int rc = unlink(SAVE_FILE);
     if (rc != 0) {
+    }
+
+    for (i = m_storage.begin(), j = m_storage.end(); i != j; ++i) {
+	StringMap &submap = i->second;
+
+	for (k = submap.begin(), l = submap.end(); k != l; ++k) {
+	    k->second = "-";
+	}
     }
 }

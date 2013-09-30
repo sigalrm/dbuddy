@@ -14,6 +14,7 @@
 #include "page_spellbooks.h"
 #include "page_wands.h"
 #include <string.h>
+#include <stdlib.h>
 
 MainPage::MainPage(): BasePage(NULL)
 {
@@ -37,28 +38,56 @@ MainPage::MainPage(): BasePage(NULL)
 }
 
 void
+MainPage::setPrayed()
+{
+    int x, y;
+    char buf[16] = {0};
+
+    getmaxyx(stdscr, y, x);
+    move(y - 1, 0);
+    addstr("Last prayed at: ");
+
+    echo();
+    wgetnstr(stdscr, buf, sizeof(buf) - 1);
+    noecho();
+
+    s->put("prayed", "val", buf);
+    s->save();
+
+    redraw();
+}
+
+void
 MainPage::enter()
 {
-    addstr("\n"
-	   "\t" PACKAGE_STRING "\n"
-	   "\n"
-	   "\tl - Level Notes (01-26)\n"
-	   "\tn - Level Notes (27-52)\n"
-	   "\ti - Intrinsics\n"
-	   "\n"
-	   "\ta - Amulets\n"
-	   "\tb - Boots\n"
-	   "\tc - Cloaks\n"
-	   "\tg - Gloves\n"
-	   "\th - Helmets\n"
-	   "\tp - Potions\n"
-	   "\tr - Rings\n"
-	   "\ts - Scrolls\n"
-	   "\tt - Spellbooks\n"
-	   "\tw - Wands\n"
-	   "\n"
-	   "\t@ - Reset Database\n"
-	   "\tq - Quit\n");
+    int prayed = atoi(s->get("prayed", "val").c_str());
+    char buf[512];
+
+    snprintf(buf, sizeof(buf),
+	     "\n"
+	     "\t" PACKAGE_STRING "\n"
+	     "\n"
+	     "\tl - Level Notes (01-26)\n"
+	     "\tn - Level Notes (27-52)\n"
+	     "\ti - Intrinsics\n"
+	     "\ty - Last Prayed - %d\n"
+	     "\n"
+	     "\ta - Amulets\n"
+	     "\tb - Boots\n"
+	     "\tc - Cloaks\n"
+	     "\tg - Gloves\n"
+	     "\th - Helmets\n"
+	     "\tp - Potions\n"
+	     "\tr - Rings\n"
+	     "\ts - Scrolls\n"
+	     "\tt - Spellbooks\n"
+	     "\tw - Wands\n"
+	     "\n"
+	     "\t@ - Reset Database\n"
+	     "\tq - Quit\n",
+	     prayed);
+
+    addstr(buf);
 }
 
 void
@@ -68,6 +97,9 @@ MainPage::process(char c)
     case 'q':
     case 27:
 	alive = false;
+	break;
+    case 'y':
+	setPrayed();
 	break;
     case '@':
 	reset();
@@ -95,11 +127,6 @@ MainPage::reset()
     if (strcmp(buf, "yes") == 0)
     {
 	s->reset();
-
-	for (ChildMap::iterator i = m_children.begin(); i != m_children.end(); ++i)
-	{
-	    i->second->reset();
-	}
     }
 
     redraw();

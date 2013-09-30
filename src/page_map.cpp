@@ -77,12 +77,3 @@ MapPage::process(char c)
 	BasePage::process(c);
     }
 }
-
-void
-MapPage::reset()
-{
-    for (StringMap::iterator i = m_map.begin(); i != m_map.end(); ++i)
-    {
-	i->second = "-";
-    }
-}
