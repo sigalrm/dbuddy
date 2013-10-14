@@ -60,11 +60,18 @@ MapPage::process(char c)
 	addstr(m_menu[c].c_str());
 	addstr(": ");
 
+	// load the current string into the input FIFO
+	// XXX is there a better way to do this?
+	std::string cur = m_map[m_menu[c]];
+	if (cur.compare("-") != 0)
+	    for (x = cur.size() - 1; x >= 0; --x)
+		ungetch(cur[x]);
+
 	echo();
 	wgetnstr(stdscr, buf, sizeof(buf) - 1);
 	noecho();
 
-	m_map[m_menu[c]] = buf;
+	m_map[m_menu[c]] = *buf ? buf : "-";
 	s->save();
 
 	redraw();

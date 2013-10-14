@@ -51,8 +51,10 @@ MainPage::setPrayed()
     wgetnstr(stdscr, buf, sizeof(buf) - 1);
     noecho();
 
-    s->put("prayed", "val", buf);
-    s->save();
+    if (*buf) {
+	s->put("prayed", "val", buf);
+	s->save();
+    }
 
     redraw();
 }
