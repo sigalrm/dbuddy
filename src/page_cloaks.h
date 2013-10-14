@@ -7,10 +7,10 @@ class CloaksPage: public MapPage
 public:
 CloaksPage(BasePage *parent): MapPage(parent, "cloaks")
     {
-	m_map["opera cloak"] = "-";
-	m_map["ornamental cope"] = "-";
-	m_map["piece of cloth"] = "-";
-	m_map["tattered cape"] = "-";
+	m_map["opera cloak"] = DEFVAL;
+	m_map["ornamental cope"] = DEFVAL;
+	m_map["piece of cloth"] = DEFVAL;
+	m_map["tattered cape"] = DEFVAL;
 
 	initMenu();
     }

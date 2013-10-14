@@ -7,31 +7,31 @@ class PotionsPage: public MapPage
 public:
 PotionsPage(BasePage *parent): MapPage(parent, "potions")
     {
-	m_map["black"] = "-";
-	m_map["brilliant blue"] = "-";
-	m_map["brown"] = "-";
-	m_map["bubbly"] = "-";
-	m_map["cloudy"] = "-";
-	m_map["cyan"] = "-";
-	m_map["dark"] = "-";
-	m_map["dark green"] = "-";
-	m_map["effervescent"] = "-";
-	m_map["emerald"] = "-";
-	m_map["fizzy"] = "-";
-	m_map["golden"] = "-";
-	m_map["magenta"] = "-";
-	m_map["milky"] = "-";
-	m_map["murky"] = "-";
-	m_map["orange"] = "-";
-	m_map["pink"] = "-";
-	m_map["puce"] = "-";
-	m_map["purple-red"] = "-";
-	m_map["ruby"] = "-";
-	m_map["sky blue"] = "-";
-	m_map["smoky"] = "-";
-	m_map["swirly"] = "-";
-	m_map["white"] = "-";
-	m_map["yellow"] = "-";
+	m_map["black"] = DEFVAL;
+	m_map["brilliant blue"] = DEFVAL;
+	m_map["brown"] = DEFVAL;
+	m_map["bubbly"] = DEFVAL;
+	m_map["cloudy"] = DEFVAL;
+	m_map["cyan"] = DEFVAL;
+	m_map["dark"] = DEFVAL;
+	m_map["dark green"] = DEFVAL;
+	m_map["effervescent"] = DEFVAL;
+	m_map["emerald"] = DEFVAL;
+	m_map["fizzy"] = DEFVAL;
+	m_map["golden"] = DEFVAL;
+	m_map["magenta"] = DEFVAL;
+	m_map["milky"] = DEFVAL;
+	m_map["murky"] = DEFVAL;
+	m_map["orange"] = DEFVAL;
+	m_map["pink"] = DEFVAL;
+	m_map["puce"] = DEFVAL;
+	m_map["purple-red"] = DEFVAL;
+	m_map["ruby"] = DEFVAL;
+	m_map["sky blue"] = DEFVAL;
+	m_map["smoky"] = DEFVAL;
+	m_map["swirly"] = DEFVAL;
+	m_map["white"] = DEFVAL;
+	m_map["yellow"] = DEFVAL;
 
 	initMenu();
     }

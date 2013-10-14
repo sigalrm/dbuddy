@@ -7,34 +7,34 @@ class IntrinsicsPage: public MapPage
 public:
 IntrinsicsPage(BasePage *parent): MapPage(parent, "intrinsics")
     {
-	m_map["aggravate monster"] = "-";
-	m_map["cold resistance"] = "-";
-	m_map["conflict"] = "-";
-	m_map["disintegration resistance"] = "-";
-	m_map["divine protection"] = "-";
-	m_map["fire resistance"] = "-";
-	m_map["food appraisal"] = "-";
-	m_map["infravision"] = "-";
-	m_map["invisibility"] = "-";
-	m_map["jumping"] = "-";
-	m_map["levitation"] = "-";
-	m_map["magical breathing"] = "-";
-	m_map["poison resistance"] = "-";
-	m_map["polymorph control"] = "-";
-	m_map["polymorphitis"] = "-";
-	m_map["protection from shape changers"] = "-";
-	m_map["regeneration"] = "-";
-	m_map["searching"] = "-";
-	m_map["see invisible"] = "-";
-	m_map["shock resistance"] = "-";
-	m_map["sleep resistance"] = "-";
-	m_map["speed"] = "-";
-	m_map["stealth"] = "-";
-	m_map["telepathy"] = "-";
-	m_map["teleport control"] = "-";
-	m_map["teleportitis"] = "-";
-	m_map["warning"] = "-";
-	m_map["water breathing"] = "-";
+	m_map["aggravate monster"] = DEFVAL;
+	m_map["cold resistance"] = DEFVAL;
+	m_map["conflict"] = DEFVAL;
+	m_map["disintegration resistance"] = DEFVAL;
+	m_map["divine protection"] = DEFVAL;
+	m_map["fire resistance"] = DEFVAL;
+	m_map["food appraisal"] = DEFVAL;
+	m_map["infravision"] = DEFVAL;
+	m_map["invisibility"] = DEFVAL;
+	m_map["jumping"] = DEFVAL;
+	m_map["levitation"] = DEFVAL;
+	m_map["magical breathing"] = DEFVAL;
+	m_map["poison resistance"] = DEFVAL;
+	m_map["polymorph control"] = DEFVAL;
+	m_map["polymorphitis"] = DEFVAL;
+	m_map["protection from shape changers"] = DEFVAL;
+	m_map["regeneration"] = DEFVAL;
+	m_map["searching"] = DEFVAL;
+	m_map["see invisible"] = DEFVAL;
+	m_map["shock resistance"] = DEFVAL;
+	m_map["sleep resistance"] = DEFVAL;
+	m_map["speed"] = DEFVAL;
+	m_map["stealth"] = DEFVAL;
+	m_map["telepathy"] = DEFVAL;
+	m_map["teleport control"] = DEFVAL;
+	m_map["teleportitis"] = DEFVAL;
+	m_map["warning"] = DEFVAL;
+	m_map["water breathing"] = DEFVAL;
 
 	initMenu();
     }

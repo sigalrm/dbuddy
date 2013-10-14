@@ -7,33 +7,33 @@ class WandsPage: public MapPage
 public:
 WandsPage(BasePage *parent): MapPage(parent, "wands")
     {
-	m_map["aluminum"] = "-";
-	m_map["balsa"] = "-";
-	m_map["brass"] = "-";
-	m_map["copper"] = "-";
-	m_map["crystal"] = "-";
-	m_map["curved"] = "-";
-	m_map["ebony"] = "-";
-	m_map["forked"] = "-";
-	m_map["glass"] = "-";
-	m_map["hexagonal"] = "-";
-	m_map["iridium"] = "-";
-	m_map["iron"] = "-";
-	m_map["jeweled"] = "-";
-	m_map["long"] = "-";
-	m_map["maple"] = "-";
-	m_map["marble"] = "-";
-	m_map["oak"] = "-";
-	m_map["pine"] = "-";
-	m_map["platinum"] = "-";
-	m_map["runed"] = "-";
-	m_map["short"] = "-";
-	m_map["silver"] = "-";
-	m_map["spiked"] = "-";
-	m_map["steel"] = "-";
-	m_map["tin"] = "-";
-	m_map["uranium"] = "-";
-	m_map["zinc"] = "-";
+	m_map["aluminum"] = DEFVAL;
+	m_map["balsa"] = DEFVAL;
+	m_map["brass"] = DEFVAL;
+	m_map["copper"] = DEFVAL;
+	m_map["crystal"] = DEFVAL;
+	m_map["curved"] = DEFVAL;
+	m_map["ebony"] = DEFVAL;
+	m_map["forked"] = DEFVAL;
+	m_map["glass"] = DEFVAL;
+	m_map["hexagonal"] = DEFVAL;
+	m_map["iridium"] = DEFVAL;
+	m_map["iron"] = DEFVAL;
+	m_map["jeweled"] = DEFVAL;
+	m_map["long"] = DEFVAL;
+	m_map["maple"] = DEFVAL;
+	m_map["marble"] = DEFVAL;
+	m_map["oak"] = DEFVAL;
+	m_map["pine"] = DEFVAL;
+	m_map["platinum"] = DEFVAL;
+	m_map["runed"] = DEFVAL;
+	m_map["short"] = DEFVAL;
+	m_map["silver"] = DEFVAL;
+	m_map["spiked"] = DEFVAL;
+	m_map["steel"] = DEFVAL;
+	m_map["tin"] = DEFVAL;
+	m_map["uranium"] = DEFVAL;
+	m_map["zinc"] = DEFVAL;
 
 	initMenu();
     }

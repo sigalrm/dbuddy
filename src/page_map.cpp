@@ -63,7 +63,7 @@ MapPage::process(char c)
 	// load the current string into the input FIFO
 	// XXX is there a better way to do this?
 	std::string cur = m_map[m_menu[c]];
-	if (cur.compare("-") != 0)
+	if (cur.compare(DEFVAL) != 0)
 	    for (x = cur.size() - 1; x >= 0; --x)
 		ungetch(cur[x]);
 
@@ -71,7 +71,7 @@ MapPage::process(char c)
 	wgetnstr(stdscr, buf, sizeof(buf) - 1);
 	noecho();
 
-	m_map[m_menu[c]] = *buf ? buf : "-";
+	m_map[m_menu[c]] = *buf ? buf : DEFVAL;
 	s->save();
 
 	redraw();

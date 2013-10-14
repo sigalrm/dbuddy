@@ -88,7 +88,7 @@ Storage::reset()
 	StringMap &submap = i->second;
 
 	for (k = submap.begin(), l = submap.end(); k != l; ++k) {
-	    k->second = "-";
+	    k->second = DEFVAL;
 	}
     }
 }

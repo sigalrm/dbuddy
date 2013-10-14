@@ -7,10 +7,10 @@ class GlovesPage: public MapPage
 public:
 GlovesPage(BasePage *parent): MapPage(parent, "gloves")
     {
-	m_map["fencing"] = "-";
-	m_map["old"] = "-";
-	m_map["padded"] = "-";
-	m_map["riding"] = "-";
+	m_map["fencing"] = DEFVAL;
+	m_map["old"] = DEFVAL;
+	m_map["padded"] = DEFVAL;
+	m_map["riding"] = DEFVAL;
 
 	initMenu();
     }

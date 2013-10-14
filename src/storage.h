@@ -4,6 +4,7 @@
 #include <map>
 
 #define SAVE_FILE ".nethack_buddy"
+#define DEFVAL "-"
 
 typedef std::map<std::string,std::string> StringMap;
 typedef std::map<std::string,StringMap> StorageMap;

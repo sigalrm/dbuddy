@@ -7,10 +7,10 @@ class HelmetsPage: public MapPage
 public:
 HelmetsPage(BasePage *parent): MapPage(parent, "helmets")
     {
-	m_map["crested"] = "-";
-	m_map["etched"] = "-";
-	m_map["plumed"] = "-";
-	m_map["visored"] = "-";
+	m_map["crested"] = DEFVAL;
+	m_map["etched"] = DEFVAL;
+	m_map["plumed"] = DEFVAL;
+	m_map["visored"] = DEFVAL;
 
 	initMenu();
     }
