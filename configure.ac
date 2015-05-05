@@ -1,4 +1,4 @@
-AC_INIT([Dungeon Buddy], [0.99], [efw@eamonwalsh.com], [dbuddy])
+AC_INIT([Dungeon Buddy], [1.0], [efw@eamonwalsh.com], [dbuddy])
 AC_PREREQ([2.59])
 
 AC_CONFIG_SRCDIR([src/main.cpp])
