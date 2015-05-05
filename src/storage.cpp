@@ -35,7 +35,9 @@ Storage::load()
 	input.getline(key, sizeof(key));
 	input.getline(value, sizeof(value));
 
-	if (!(strlen(type) && strlen(key) && strlen(value)))
+	if (input.eof())
+	    break;
+	if (!(strlen(type) && strlen(key)))
 	    break;
 
 	m_storage[type][key] = value;
