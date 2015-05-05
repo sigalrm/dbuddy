@@ -35,6 +35,9 @@ MainPage::MainPage(): BasePage(NULL)
     addChild('s', new ScrollsPage(this));
     addChild('t', new SpellbooksPage(this));
     addChild('w', new WandsPage(this));
+
+    // add values
+    s->put("prayed", "val", DEFVAL);
 }
 
 void
