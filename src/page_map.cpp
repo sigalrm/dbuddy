@@ -33,7 +33,7 @@ MapPage::initMenu()
 void
 MapPage::enter()
 {
-    addstr("\n");
+    // addstr("\n");
 
     for (MenuMap::iterator i = m_menu.begin(); i != m_menu.end(); ++i)
     {
